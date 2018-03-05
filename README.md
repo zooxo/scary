@@ -37,7 +37,7 @@ Compile the attached file "scary_1_0-ino" with your arduino suite and upload the
   4. If applicable: Toggle sign of number with CHS
 
 ## A short Video of a Miniaturized ScArY
-http://youtu.be/F3uRQhoFq40
+https://www.youtube.com/watch?v=q-9j547xWfg
 
 ## Some Pictures of a Miniaturized ScArY
 ![pics](https://user-images.githubusercontent.com/16148023/36966765-be3b98d6-2055-11e8-950e-49108db44dd6.png)
