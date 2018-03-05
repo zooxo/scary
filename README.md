@@ -14,15 +14,20 @@ Compile the attached file "scary_1_0-ino" with your arduino suite and upload the
 
 ## Which Commands does ScArY support (COMMANDS and KEYS)?    
 ### Basic keys:
-0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ., EE, CHS, ENTER, C/CE, f
+* 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ., EE, CHS, ENTER, C/CE, f
 ### f-keys:
-+, -, *, / (basic operations)
+* +, -, *, / (basic operations)
 * STO, RCL, SHOW, SWAP, LASTx, ROT+, ROT-, SQRT, P
 * MENU (browse menu)
-BRIGHTNESS (set brightness of display)
-zZZ (toggle screensaver)
+* BRIGHTNESS (set brightness of display)
+* zZZ (toggle screensaver)
 ### MENU-functions:
-POWER, 1/X, EXP, LN      SIN, COS, TAN, ASIN, ACOS, ATAN      SINH, COSH, TANH, ASINH, ACOSH, ATANH      ANNU (present value for a given interest rate and duration)      GAUSS (density and distribution)      FACT, DEG, RAD
+* POWER, 1/X, EXP, LN
+* SIN, COS, TAN, ASIN, ACOS, ATAN
+* SINH, COSH, TANH, ASINH, ACOSH, ATANH
+* ANNU (present value for a given interest rate and duration)
+* GAUSS (density and distribution)
+* FACT, DEG, RAD
 
 ## A short Video of a Miniaturized Mobile ARC
 ## Some Pictures of a Miniaturized ScArY
