@@ -37,6 +37,7 @@ Compile the attached file "scary_1_0-ino" with your arduino suite and upload the
   4. If applicable: Toggle sign of number with CHS
 
 ## A short Video of a Miniaturized ScArY
+http://youtu.be/F3uRQhoFq40
 
 ## Some Pictures of a Miniaturized ScArY
 ![pics](https://user-images.githubusercontent.com/16148023/36966765-be3b98d6-2055-11e8-950e-49108db44dd6.png)
@@ -46,14 +47,3 @@ Compile the attached file "scary_1_0-ino" with your arduino suite and upload the
 
 ## The Keyboard Layout
 ![keyboard](https://user-images.githubusercontent.com/16148023/36966764-be132be4-2055-11e8-9582-b050a5415ba3.png)
-
-
-
-
-KEYBOARD LAYOUT:     f[] [zZZ]           7 [MENU]    8 [SWAP]        9 [/]      EE [ROT-] (UP)     4 [PI]      5 [SQRT]        6 [*]     CHS [ROT+] (DOWN)   1 [STO]     2 [RCL]         3 [-]       c [brightness]    0 [SHUOW]   . [LASTx]   ENTER [+]  MENU (f[7]):       P (POW)    r (1/x)     E (EXP)     L  (LN)                  S (SIN)     c (COS)     t  (TAN)       =          S (ASIN)    c (ACOS)    t  (ATAN)       H          S (SINH)    c (COSH)    t  (TANH)       H=         S (ASINH)   c (ACOSH)   t  (ATANH)       A (ANNU)   G (GAUSS)   F (FACT)    dr (DEG/RAD)  8-DIGITS SCIENTIFIC DISPLAY (SCI notation):       mantissa  exponent       |         |     - m.m m m - e e     |         |     sign      EE-sign  ENTERING NUMBERS:    1.) Enter mantissa (with '.' if applicabel)    2.) If applicable: Enter EE to enter exponent (limited to 29)    3.) If applicable: Toggle sign of exponent with EE    4.) If applicable: Toggle sign of number with CHS  
- 
- 
-
-## A short Video of a Miniaturized Mobile ARChttp://youtu.be/F3uRQhoFq40
-In this video you can see the following calculations:* Approximating PI with 22/7* Inserting -3.14159265E-2* Setting to 6 decimal places (FIX)* Calculating the mean value and standard deviation of 4, 5 and 6 (including SWAP)* Convert a rectangular vector (1,1) to polar and back (swap to change arguments)* Calculating the Gauss normal distribution and density function at 0 (swap to change results)* Starting a clock at 8:16 (and 50 seconds)
-
