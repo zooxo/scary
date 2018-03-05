@@ -26,7 +26,7 @@ Compile the attached file "scary_1_0-ino" with your arduino suite and upload the
 * SIN, COS, TAN, ASIN, ACOS, ATAN
 * SINH, COSH, TANH, ASINH, ACOSH, ATANH
 * ANNU (present value for a given interest rate and duration)
-* GAUSS (density and distribution)
+* GAUSS PDF/CDF (Propability Density Function and Cumulated Distribution Function)
 * FACT (factorial)
 * DEG/RAD
 
