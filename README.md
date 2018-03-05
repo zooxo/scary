@@ -35,6 +35,7 @@ Compile the attached file "scary_1_0-ino" with your arduino suite and upload the
 ## Some Pictures of a Miniaturized ScArY
 
 ## The Circuit Diagram
+![circuit](https://user-images.githubusercontent.com/16148023/36966406-9af16da2-2054-11e8-82b8-f2e3506f791c.png)
 
 
 
