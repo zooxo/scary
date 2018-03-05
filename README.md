@@ -33,11 +33,13 @@ Compile the attached file "scary_1_0-ino" with your arduino suite and upload the
 ## A short Video of a Miniaturized ScArY
 
 ## Some Pictures of a Miniaturized ScArY
+![pics](https://user-images.githubusercontent.com/16148023/36966480-d494bb0e-2054-11e8-909a-2a9a36fc350e.png)
 
 ## The Circuit Diagram
 ![circuit](https://user-images.githubusercontent.com/16148023/36966406-9af16da2-2054-11e8-82b8-f2e3506f791c.png)
 
-
+## The Keyboard Layout
+![keyboard](https://user-images.githubusercontent.com/16148023/36966476-d0399098-2054-11e8-87aa-93df38061d3d.png)
 
 
 
