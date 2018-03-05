@@ -1,4 +1,4 @@
-# ScArY (Scientific RPN calculator on ATTINY) 1.0
+# ScArY - Scientific RPN calculator on ATTINY
 Version 1.0 ... (c) 2018 by deetee/zooxo
 
 ## What is ScArY?
