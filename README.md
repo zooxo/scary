@@ -17,7 +17,7 @@ Compile the attached file "scary_1_0-ino" with your arduino suite and upload the
 * 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ., EE, CHS, ENTER, C/CE, f
 ### f-keys:
 * +, -, *, / (basic operations)
-* STO, RCL, SHOW, SWAP, LASTx, ROT+, ROT-, SQRT, P
+* STO, RCL, SHOW, SWAP, LASTx, ROT+, ROT-, SQRT, PI
 * MENU (browse menu)
 * BRIGHTNESS (set brightness of display)
 * zZZ (toggle screensaver)
