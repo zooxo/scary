@@ -30,6 +30,12 @@ Compile the attached file "scary_1_0-ino" with your arduino suite and upload the
 * FACT (factorial)
 * DEG/RAD
 
+## How to Enter a Number?
+1.) Enter mantissa (with '.' if applicabel)
+2.) If applicable: Enter EE to enter exponent (limited to 29)
+3.) If applicable: Toggle sign of exponent with EE
+4.) If applicable: Toggle sign of number with CHS
+
 ## A short Video of a Miniaturized ScArY
 
 ## Some Pictures of a Miniaturized ScArY
