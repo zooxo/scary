@@ -33,7 +33,7 @@ Compile the attached file "scary_1_0-ino" with your arduino suite and upload the
 ## A short Video of a Miniaturized ScArY
 
 ## Some Pictures of a Miniaturized ScArY
-![pics](https://user-images.githubusercontent.com/16148023/36966480-d494bb0e-2054-11e8-909a-2a9a36fc350e.png)
+![pics](https://user-images.githubusercontent.com/16148023/36966765-be3b98d6-2055-11e8-950e-49108db44dd6.png)
 
 ## The Circuit Diagram
 ![circuit](https://user-images.githubusercontent.com/16148023/36966763-bdd99212-2055-11e8-9185-e1ec609a81a4.png)
@@ -50,7 +50,4 @@ KEYBOARD LAYOUT:     f[] [zZZ]           7 [MENU]    8 [SWAP]        
 
 ## A short Video of a Miniaturized Mobile ARChttp://youtu.be/F3uRQhoFq40
 In this video you can see the following calculations:* Approximating PI with 22/7* Inserting -3.14159265E-2* Setting to 6 decimal places (FIX)* Calculating the mean value and standard deviation of 4, 5 and 6 (including SWAP)* Convert a rectangular vector (1,1) to polar and back (swap to change arguments)* Calculating the Gauss normal distribution and density function at 0 (swap to change results)* Starting a clock at 8:16 (and 50 seconds)
-## Some Pictures of a Miniaturized Mobile ARC
-![ARC pictures](https://cloud.githubusercontent.com/assets/16148023/18578469/618225e8-7bf0-11e6-8ab1-5494e8903779.jpg "pictures")
-## The Circuit Diagram![ARC circuit diagram](https://cloud.githubusercontent.com/assets/16148023/18578474/65d0e99a-7bf0-11e6-9758-1d2680048e55.png "circuit")
-## Key Assignment for the 12-Key-Keyboard![ARC assignment of keys](https://cloud.githubusercontent.com/assets/16148023/18578478/6a3a0458-7bf0-11e6-8bd6-32abda655e6e.png "keys")
+
