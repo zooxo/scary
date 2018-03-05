@@ -27,7 +27,8 @@ Compile the attached file "scary_1_0-ino" with your arduino suite and upload the
 * SINH, COSH, TANH, ASINH, ACOSH, ATANH
 * ANNU (present value for a given interest rate and duration)
 * GAUSS (density and distribution)
-* FACT, DEG, RAD
+* FACT (factorial)
+* DEG/RAD
 
 ## A short Video of a Miniaturized Mobile ARC
 ## Some Pictures of a Miniaturized ScArY
