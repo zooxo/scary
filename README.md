@@ -30,8 +30,10 @@ Compile the attached file "scary_1_0-ino" with your arduino suite and upload the
 * FACT (factorial)
 * DEG/RAD
 
-## A short Video of a Miniaturized Mobile ARC
+## A short Video of a Miniaturized ScArY
+
 ## Some Pictures of a Miniaturized ScArY
+
 ## The Circuit Diagram
 
 
