@@ -16,13 +16,22 @@ Compile the attached file "scary_1_0-ino" with your arduino suite and upload the
 ### Basic keys:
 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ., EE, CHS, ENTER, C/CE, f
 ### f-keys:
-+, -, *, / (basic operations)      STO, RCL, SHOW, SWAP, LASTx, ROT+, ROT-, SQRT, P      MENU (browse menu)      BRIGHTNESS (set brightness of display)      zZZ (toggle screensaver)
++, -, *, / (basic operations)
+* STO, RCL, SHOW, SWAP, LASTx, ROT+, ROT-, SQRT, P
+* MENU (browse menu)
+BRIGHTNESS (set brightness of display)
+zZZ (toggle screensaver)
 ### MENU-functions:
 POWER, 1/X, EXP, LN      SIN, COS, TAN, ASIN, ACOS, ATAN      SINH, COSH, TANH, ASINH, ACOSH, ATANH      ANNU (present value for a given interest rate and duration)      GAUSS (density and distribution)      FACT, DEG, RAD
 
 ## A short Video of a Miniaturized Mobile ARC
 ## Some Pictures of a Miniaturized ScArY
 ## The Circuit Diagram
+
+
+
+
+
 
 
 KEYBOARD LAYOUT:     f[] [zZZ]           7 [MENU]    8 [SWAP]        9 [/]      EE [ROT-] (UP)     4 [PI]      5 [SQRT]        6 [*]     CHS [ROT+] (DOWN)   1 [STO]     2 [RCL]         3 [-]       c [brightness]    0 [SHUOW]   . [LASTx]   ENTER [+]  MENU (f[7]):       P (POW)    r (1/x)     E (EXP)     L  (LN)                  S (SIN)     c (COS)     t  (TAN)       =          S (ASIN)    c (ACOS)    t  (ATAN)       H          S (SINH)    c (COSH)    t  (TANH)       H=         S (ASINH)   c (ACOSH)   t  (ATANH)       A (ANNU)   G (GAUSS)   F (FACT)    dr (DEG/RAD)  8-DIGITS SCIENTIFIC DISPLAY (SCI notation):       mantissa  exponent       |         |     - m.m m m - e e     |         |     sign      EE-sign  ENTERING NUMBERS:    1.) Enter mantissa (with '.' if applicabel)    2.) If applicable: Enter EE to enter exponent (limited to 29)    3.) If applicable: Toggle sign of exponent with EE    4.) If applicable: Toggle sign of number with CHS  
