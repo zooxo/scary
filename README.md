@@ -39,8 +39,7 @@ Compile the attached file "scary_1_0-ino" with your arduino suite and upload the
 ![circuit](https://user-images.githubusercontent.com/16148023/36966763-bdd99212-2055-11e8-9185-e1ec609a81a4.png)
 
 ## The Keyboard Layout
-![keyboard](https://user-images.githubusercontent.com/16148023/36966476-d0399098-2054-11e8-87aa-93df38061d3d.png)
-
+![keyboard](https://user-images.githubusercontent.com/16148023/36966764-be132be4-2055-11e8-9582-b050a5415ba3.png)
 
 
 
