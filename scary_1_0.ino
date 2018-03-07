@@ -314,13 +314,13 @@
 
 // SUBPROGRAMS
 
-void cmd(byte val) { // Send command to shield
+static void cmd(byte val) { // Send command to shield
   digitalWrite(STROBE, LOW);
   shiftOut(DATA, CLOCK, LSBFIRST, val);
   digitalWrite(STROBE, HIGH);
 }
 
-unsigned int getbuttons() { // Get button code (only one key at a time) - 16 bits
+static unsigned int getbuttons() { // Get button code (only one key at a time) - 16 bits
   unsigned int buttons = 0;
   byte val = 0;
   digitalWrite(STROBE, LOW);
@@ -336,19 +336,19 @@ unsigned int getbuttons() { // Get button code (only one key at a time) - 16 bit
   return (buttons);
 }
 
-byte buttoncast() { // Get button pattern and return keycode
-  const unsigned int _k[KEYS] = { // Indexing keyboard codes
+static byte buttoncast() { // Get button pattern and return keycode
+  static const unsigned int _k[KEYS] = { // Indexing keyboard codes
     _K1, _K2,  _K3,  _K4,  _K5,  _K6,  _K7,  _K8,
     _K9, _K10, _K11, _K12, _K13, _K14, _K15, _K16
   };
-  const byte _kc[KEYS] = { // Indexing keycodes
+  static const byte _kc[KEYS] = { // Indexing keycodes
     _KC1, _KC2,  _KC3,  _KC4,  _KC5,  _KC6,  _KC7,  _KC8,
     _KC9, _KC10, _KC11, _KC12, _KC13, _KC14, _KC15, _KC16
   };
   for (byte i = 0; i < KEYS; i++) if (getbuttons() & _k[i]) return (_kc[i]); // Casting
 }
 
-byte getkey() { // Get one debounced key
+static byte getkey() { // Get one debounced key
   static byte oldkey = 0; // Needed for debouncing
   byte key1 = buttoncast(), key2 = 0;
   if (key1 != oldkey) key2 = buttoncast();
@@ -359,7 +359,7 @@ byte getkey() { // Get one debounced key
   return (NULL);
 }
 
-void printbuf(byte *buf, byte dotpos) { // Write buffer and dot to display
+static void printbuf(byte *buf, byte dotpos) { // Write buffer and dot to display
   byte digbuf;
   if (dotpos > 0 && dotpos <= DIGITS) // Set dot
     buf[dotpos - 1] = buf[dotpos - 1] | _7FULLSTOP;
@@ -379,8 +379,8 @@ void printbuf(byte *buf, byte dotpos) { // Write buffer and dot to display
   }
 }
 
-void printfloat(double f, boolean show) { // Prints double or mantissa (show=true)
-  const byte digits[] = { // Character set to display numbers
+static void printfloat(double f, boolean show) { // Prints double or mantissa (show=true)
+  static const byte digits[] = { // Character set to display numbers
     _7DIGIT0, _7DIGIT1, _7DIGIT2, _7DIGIT3, _7DIGIT4,
     _7DIGIT5, _7DIGIT6, _7DIGIT7, _7DIGIT8, _7DIGIT9
   };
@@ -433,25 +433,31 @@ void printfloat(double f, boolean show) { // Prints double or mantissa (show=tru
   printbuf(dispbuf, dot); // Write buffer and dot to display
 }
 
-byte fcast(byte k) { // Returns f-key code
-  const byte _f_old[] = {' ', '3', '6', '9', '7', '.', '0', 'E', '#', '1', '2', '4', '5', 'c', '8'}; // f-cast from
-  const byte _f_new[] = {'+', '-', '*', '/', 'A', 'X', 'y', 'R', 'r', 'M', 'm', 'p', 'Q', 'z', 'x'}; // to
+static byte fcast(byte k) { // Returns f-key code
+  static const byte _f_old[] = {' ', '3', '6', '9', '7', '.', '0', 'E', '#', '1', '2', '4', '5', 'c', '8'}; // f-cast from
+  static const byte _f_new[] = {'+', '-', '*', '/', 'A', 'X', 'y', 'R', 'r', 'M', 'm', 'p', 'Q', 'z', 'x'}; // to
   for (byte i = 0; i < NUMBEROFF; i++) {
     if (k == _f_old[i]) return (_f_new[i]);
   }
   return (NULL);
 }
 
-void push(double* a, double* b, double* c, double* d) { // Push stack
-  *d = *c; *c = *b; *b = *a;
+static double x = 0.0, y = 0.0, z = 0.0, u = 0.0;
+
+static void push(void) { // Push stack
+  u = z; z = y; y = x;
 }
 
-void pull(double* a, double* b, double* c, double* d, boolean isfull) { // Pull stack
-  if (isfull) *a = *b;
-  *b = *c; *c = *d;
+static void pull_full(void) { // Pull stack
+  y = z; z = u;
 }
 
-double _pow10(int8_t e) { // Returns 10^e
+static void pull_top3(void) {
+  x = y;
+  pull_full();
+}
+
+static double _pow10(int8_t e) { // Returns 10^e
   boolean ne = (e < 0);
   double f = 1.0;
   for (byte i = _abs(e); i > 0; i--)  f *= 10;
@@ -459,7 +465,7 @@ double _pow10(int8_t e) { // Returns 10^e
   return (f);
 }
 
-double _exp_sin(double f, boolean isexp) { // Calculate exp with Taylor series
+static double _exp_sin(double f, boolean isexp) { // Calculate exp with Taylor series
   double result = f;
   double frac = f;
   if (isexp) result = frac = 1.0;
@@ -490,7 +496,7 @@ void setup() {
 void loop() {
   //while (1) { //***
   byte key = NULL;
-  static double x = 0.0, y = 0.0, z = 0.0, u = 0.0, lastx = 0.0, mem = 0.0; // Stack, memory
+  static double lastx = 0.0, mem = 0.0; // Stack, memory
   static double rad = 180.0 / PI; // Multiplier for radiants
   static boolean isnewnumber = false; // True if stack has to be lifted before entering a new number
   static boolean ispushed = false; // True if stack was already pushed by ENTER
@@ -507,7 +513,7 @@ void loop() {
   static byte brightness = 0;
   static boolean isdisplaydeactivated = false;
 
-  const byte _msgs[][DIGITS] = {
+  static const byte _msgs[][DIGITS] = {
     {_7LETTERP, 0, _7LETTERr, 0, _7LETTERE, 0, _7LETTERL, 0},          // pow_1/x_exp_ln
     {0, 0, _7LETTERS, 0, _7LETTERc, 0, _7LETTERt, 0},                  // _sin_cos_tan
     {_7HIGHLINE, 0, _7LETTERS, 0, _7LETTERc, 0, _7LETTERt, 0},         // _asin_acos_atan
@@ -515,7 +521,7 @@ void loop() {
     {_7LETTERh, _7HIGHLINE, _7LETTERS, 0, _7LETTERc, 0, _7LETTERt, 0}, // _asinh_acosh_atanh
     {_7LETTERA, 0, _7LETTERG, 0, _7LETTERF, 0, _7LETTERd, _7LETTERr},  // annu_gauss_deg_rad
   };
-  const byte _menuchar[][4] = { // Menu keycodes
+  static const byte _menuchar[][4] = { // Menu keycodes
     {'P', 'i', 'L', 'l'},     // pow_1/x_exp_ln
     {0, 's', 'o', 't'},       // _sin_cos_tan
     {0, 'S', 'O', 'T'},       // _asin_acos_atan
@@ -576,7 +582,7 @@ void loop() {
     if (!isfpressed) {
       if (isnewnumber) { // Enable starting new number with .
  //       if (ispushed) ispushed = false;
- //       else push(&x, &y, &z, &u);
+ //       else push();
         x = 0.0;
         decimals = 0;
         isnewnumber = false;
@@ -607,7 +613,7 @@ void loop() {
     if ((key >= DIGIT0) && (key <= DIGIT9)) { // Numeric input
       if (isnewnumber) { // New number
         if (ispushed) ispushed = false;
-        else push(&x, &y, &z, &u);
+        else push();
         x = isee ? 1.0 : 0.0; // Reset x (x=1 if EE-input follows)
         decimals = 0;
         isenteringnumber = true;
@@ -625,7 +631,7 @@ void loop() {
       }
     }
     else if (key == ENTER) { // ENTER
-      push(&x, &y, &z, &u);
+      push();
       ispushed = true;
       isnewnumber = true;
       isee = false;
@@ -660,35 +666,35 @@ void loop() {
         case ADD: // ADD
           lastx = x;
           x = x + y;
-          pull(&x, &y, &z, &u, false);
+          pull_top3();
           break;
         case SUBSTRACT: // SUBSTRACT
           lastx = x;
           x = y - x;
-          pull(&x, &y, &z, &u, false);
+          pull_top3();
           break;
         case MULTIPLY: // MULTIPLY
           lastx = x;
           x = x * y;
-          pull(&x, &y, &z, &u, false);
+          pull_top3();
           break;
         case DIVIDE: // DIVIDE
           lastx = x;
           x = y / x;
-          pull(&x, &y, &z, &u, false);
+          pull_top3();
           break;
         case BRIGHTNESS: { // Set brightness
             brightness = x > BRIGHTMAX ? BRIGHTMAX : (int)x;
             cmd(0x88 | brightness);
             //cmd(0x88 | (x > BRIGHTMAX ? BRIGHTMAX : (int)x));
-            pull(&x, &y, &z, &u, true);
+            pull_full();
             break;
           }
         case STO: // STO
           mem = x;
           break;
         case RCL: // RCL
-          push(&x, &y, &z, &u);
+          push();
           x = mem;
           break;
         case SWAP: { // SWAP
@@ -698,18 +704,18 @@ void loop() {
             break;
           }
         case LASTX: // LASTx
-          push(&x, &y, &z, &u);
+          push();
           x = lastx;
           break;
         case ROTDOWN: { // ROT down
             double tmp = x;
-            pull(&x, &y, &z, &u, true);
+            pull_full();
             u = tmp;
             break;
           }
         case ROTUP: { // ROT up
             double tmp = u;
-            push(&x, &y, &z, &u);
+            push();
             x = tmp;
             break;
           }
@@ -724,13 +730,13 @@ void loop() {
           break;
         case POW: // XpowerY
           x = _exp_sin(x * log(y), true);
-          pull(&x, &y, &z, &u, false);
+          pull_top3();
           break;
         case INV: // 1/x
           x = _exp_sin(-log(x), true);
           break;
         case PEE: // PI
-          if (!ispushed) push(&x, &y, &z, &u);
+          if (!ispushed) push();
           x = PI;
           break;
         case DEGRAD: // Toggle ->DEG ->RAD
@@ -739,7 +745,7 @@ void loop() {
           break;
         case ANNU: // Annuity
           x = (1 - _exp_sin(-x * log(1 + y), true)) / y;
-          pull(&x, &y, &z, &u, false);
+          pull_top3();
           break;
         case SIN: case ASIN: case COS: case ACOS: case TAN: case ATAN: { // Trigonometric
             double si = _exp_sin(x / rad, false);
