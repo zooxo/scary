@@ -23,18 +23,16 @@ Compile the attached file "scary_2_0-ino" with your arduino suite and upload the
 * 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ., EE, CHS, ENTER, C/CE, f
 ### f-keys:
 * +, -, *, / (basic operations)
-* STO, RCL, SHOW, SWAP, LASTx, ROT+, ROT-, SQRT, PI
+* STO, RCL, SHOW, SWAP, ROT, SQRT, PI
 * MENU (browse menu)
 * BRIGHTNESS (set brightness of display)
 * zZZ (toggle screensaver)
 ### MENU-functions:
-* POWER, 1/X, EXP, LN
+* EXP, SQRT, POWER, 1/X,
+* LN, GAUSS (PDF and CDF), GAMMA (Gamma/factorial), DEG/RAD (toggle)
 * SIN, COS, TAN, ASIN, ACOS, ATAN
 * SINH, COSH, TANH, ASINH, ACOSH, ATANH
-* ANNU (present value for a given interest rate and duration)
-* GAUSS PDF/CDF (Propability Density Function and Cumulated Distribution Function)
-* FACT (factorial)
-* DEG/RAD
+* "a b c d" user menu (plays recorded keypresses from slot "1 2 3 4"
 
 ## How to Enter a Number?
   1. Enter mantissa (with '.' if applicable)
@@ -43,7 +41,8 @@ Compile the attached file "scary_2_0-ino" with your arduino suite and upload the
   4. If applicable: Toggle sign of number with CHS
 
 ## A short Video of a Miniaturized ScArY
-https://www.youtube.com/watch?v=q-9j547xWfg
+Version 1.0: https://youtu.be/q-9j547xWfg
+Version 2.0: https://youtu.be/O8WEHZN1RMk
 
 ## Some Pictures of a Miniaturized ScArY
 ![pics](https://user-images.githubusercontent.com/16148023/36966765-be3b98d6-2055-11e8-950e-49108db44dd6.png)
@@ -59,54 +58,41 @@ https://www.youtube.com/watch?v=q-9j547xWfg
      CHS [ROT] (DOWN)    1 [PI]      2 [REC]         3 [-]
        c [brightness]    0 [SWAP]    . [SHOW]    ENTER [+]
 
+       E (EXP)    S (SQRT)    P (POW)      r (1/x)
+       L (LN)     G (GAUSS)   | (GAMMA)   dr (DEG/RAD) 
+                  S (SIN)     c (COS)      t (TAN)
+       ^          S (ASIN)    c (ACOS)     t (ATAN)
+       h          S (SINH)    c (COSH)     t (TANH)
+       h^         S (ASINH)   c (ACOSH)    t (ATANH)
+       a (PLAY1)  b (PLAY2)   c (PLAY3)    d (PLAY4)
 
-  Welcome to ScArY (Scientific Calculator with RPN on an ATTINY)
-  Version 2.0 ... (c) 2018 by deetee/zooxo
+## FIRST LAUNCH AFTER FLASHUNG THE ATTINY85:
+As ScArY saves the state (stack and brightness values) when pressing the f-key twice (screensaver) it also loads the state after switching on. But flashing the ATTINY may clear the EEPROM. So the loaded state when switching on the first time after flashing gets undefined values (... and maybe a dark or nonsense display).
 
-  FIRST LAUNCH AFTER FLASHUNG THE ATTINY85:
-    As ScArY saves the state (stack and brightness values) when pressing the
-    f-key twice (screensaver) it also loads the state after switching on.
-    But flashing the ATTINY may clear the EEPROM. So the loaded state when
-    switching on the first time after flashing gets undefined values
-    (... and maybe a dark or nonsense display).
-  So the following procedure may help to bring ScArY in a defined state:
-    1 Press CLX (X=0) ... even if the display remains dark
-    2 Set brightness (f-CLX) ... at least a nonsense display should be readable
-    3 Press CLX (X=0) ... value of 0 should be readable
-    4 Press ENTER 3 times to clear the stack (X=Y=Z=T=0)
-    5 Press STO (f-1) to clear mem
-    6 Press f twice (f-f) to save the state to the EEPROM (activates screensaver too)
-    7 Press f to (re)activate the screen
-    8 Done! (till you flash the ATTINY again)
+So the following procedure may help to bring ScArY in a defined state:
+  1 Press CLX (X=0) ... even if the display remains dark
+  2 Set brightness (f-CLX) ... at least a nonsense display should be readable
+  3 Press CLX (X=0) ... value of 0 should be readable
+  4 Press ENTER 3 times to clear the stack (X=Y=Z=T=0)
+  5 Press STO (f-1) to clear mem
+  6 Press f twice (f-f) to save the state to the EEPROM (activates screensaver too)
+  7 Press f to (re)activate the screen
+  8 Done! (till you flash the ATTINY again)
 
-
-  KEYBOARD LAYOUT:
-
-
-  MENU (f-EE):
-       E (EXP)    S (SQRT)    P (POW)      r (1/x)
-       L (LN)     G (GAUSS)   | (GAMMA)   dr (DEG/RAD)
-                  S (SIN)     c (COS)      t (TAN)
-       ^          S (ASIN)    c (ACOS)     t (ATAN)
-       h          S (SINH)    c (COSH)     t (TANH)
-       h^         S (ASINH)   c (ACOSH)    t (ATANH)
-       a (PLAY0)  b (PLAY1)   c (PLAY2)    d (PLAY3)
-
-
-  8-DIGITS SCIENTIFIC DISPLAY (SCI notation):
-
+## 8-DIGITS SCIENTIFIC DISPLAY (SCI notation):
+```
        mantissa  exponent
        |         |
      - m.m m m - e e.
      |         |    |
      sign  EE-sign  Indicator for recording
+```
 
-
-  ENTERING NUMBERS:
-    1.) Enter mantissa (with '.' if applicable)
-    2.) If applicable: Enter EE to enter exponent (limited to 29)
-    3.) If applicable: Toggle sign of exponent with EE
-    4.) If applicable: Toggle sign of number with CHS
+## ENTERING NUMBERS:
+  1 Enter mantissa (with '.' if applicable)
+  2 If applicable: Enter EE to enter exponent (limited to 29)
+  3 If applicable: Toggle sign of exponent with EE
+  4 If applicable: Toggle sign of number with CHS
 
 
   COMMANDS and KEYS:
