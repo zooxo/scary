@@ -79,11 +79,6 @@ https://www.youtube.com/watch?v=q-9j547xWfg
 
   KEYBOARD LAYOUT:
 
-     f[] [zZZ RESCUE]    7 [RCL]     8 [STO]         9 [/]
-      EE [MENU] (UP)     4 [CONST]   5 [SAVE]        6 [*]
-     CHS [ROT] (DOWN)    1 [PI]      2 [REC]         3 [-]
-       c [brightness]    0 [SWAP]    . [SHOW]    ENTER [+]
-
 
   MENU (f-EE):
        E (EXP)    S (SQRT)    P (POW)      r (1/x)
