@@ -183,8 +183,9 @@ https://www.youtube.com/watch?v=q-9j547xWfg
   Browse stored numbers with LOAD (f-4) and load to X with ENTER. For browsing use
   UP and DOWN keys or enter a number (2 digits) directly.
 
-  PHYSICAL CONSTANTS, DECIMAL IDENTIFIER, NAME (source: WP34s manual):
-    Constant         No  Td  Zd  Yd TZY Name
+## PHYSICAL CONSTANTS, DECIMAL IDENTIFIER, NAME (source: WP34s manual):
+```
+Constant         No  Td  Zd  Yd TZY Name
     ------------------------------------------------------------------------
     365.2425,     // 00 000 000 119   A Gregorian year
     5.291772E-11, // 01 000 119 092  Ao Bohr radius
@@ -247,10 +248,10 @@ https://www.youtube.com/watch?v=q-9j547xWfg
     -4.490448E-26,// 58 008 073 073 _mm Muon magnetic moment
     5.670373E-8,  // 59 008 109 124 _SB Stefan-Boltzmann constant
     1.618034,     // 60 000 008 115  _P Golden ratio
-    2.067834E-15, // 61 008 115 092 _Po Magnetic flux quantum
-
-  IDENTIFIERS OF SEVEN SEGMENT DISPLAY (ie code to display digit 3 =  79 = 4f):
-
+    2.067834E-15, // 61 008 115 092 _Po Magnetic flux quantum
+```
+  
+## IDENTIFIERS OF SEVEN SEGMENT DISPLAY (ie code to display digit 3 =  79 = 4f):
 ```
     DEC       0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
         HEX   0   1   2   3   4   5   6   7   8   9   a   b   c   d   e   f
