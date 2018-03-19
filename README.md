@@ -42,6 +42,7 @@ Compile the attached file "scary_2_0-ino" with your arduino suite and upload the
 
 ## A short Video of a Miniaturized ScArY
 Version 1.0: https://youtu.be/q-9j547xWfg
+
 Version 2.0: https://youtu.be/O8WEHZN1RMk
 
 ## Some Pictures of a Miniaturized ScArY
