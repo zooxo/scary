@@ -1,13 +1,13 @@
 # ScArY - Scientific RPN calculator on ATTINY
-Version 1.0 ... (c) 2018 by deetee/zooxo
+Version 2.0 ... (c) 2018 by deetee/zooxo
 Special thanks to the mohpc-forum (particular Pauli) for saving bytes an providing ideas.
   
 ## What is ScArY?
 ScArY is a scientific calculator based on an ATTINY85 microcontroller and a QYF-TM1638-board (8 digit LED display with 16 buttons controlled with 3 pins).
+
 ScArY is capable of familiar functions of RPN calculators (ie stack operations) and many mathematical operations (ie trigonometic) as well as some special functions like gaussian distributions and gamma. In addition ScArY can save its state,  physical constants and sequences of keypresses permanently to the EEPROM.
+
 Due to the memory restrictions of the ATTINY85 (8 kilobytes) some compromises were made to offer so many functions. So the numbers are shown in SCI notation only (see below). Another compromise is the lack of checking for errors - usually the display is unreadable if an error occurs.
-
-
 
 ## What's new in version2?
 * ScArY saves its actual status (stack, brightness setting) permanantly to EEPROM. This is done when the screensaver is activated (keys f-f). Note the procedure to initialize these values after flashing the software (EEPROM was deleted).
