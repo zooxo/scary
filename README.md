@@ -53,7 +53,7 @@ Version 2.0: https://youtu.be/O8WEHZN1RMk
 
 ## The Keyboard Layout
 ![keyboard2](https://user-images.githubusercontent.com/16148023/37587218-9ac6e782-2b56-11e8-8b4f-b3bd2d1db401.png)
-
+```
      f[] [zZZ RESCUE]    7 [RCL]     8 [STO]         9 [/]
       EE [MENU] (UP)     4 [CONST]   5 [SAVE]        6 [*]
      CHS [ROT] (DOWN)    1 [PI]      2 [REC]         3 [-]
@@ -66,6 +66,7 @@ Version 2.0: https://youtu.be/O8WEHZN1RMk
        h          S (SINH)    c (COSH)     t (TANH)
        h^         S (ASINH)   c (ACOSH)    t (ATANH)
        a (PLAY1)  b (PLAY2)   c (PLAY3)    d (PLAY4)
+```
 
 ## FIRST LAUNCH AFTER FLASHUNG THE ATTINY85:
 As ScArY saves the state (stack and brightness values) when pressing the f-key twice (screensaver) it also loads the state after switching on. But flashing the ATTINY may clear the EEPROM. So the loaded state when switching on the first time after flashing gets undefined values (... and maybe a dark or nonsense display).
