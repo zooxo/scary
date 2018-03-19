@@ -76,7 +76,7 @@ So the following procedure may help to bring ScArY in a defined state:
   2. Set brightness (f-CLX) ... at least a nonsense display should be readable
   3. Press CLX (X=0) ... value of 0 should be readable
   4. Press ENTER 3 times to clear the stack (X=Y=Z=T=0)
-  5. Press STO (f-1) to clear mem
+  5. Press STO (f-8) to clear mem
   6. Press f twice (f-f) to save the state to the EEPROM (activates screensaver too)
   7. Press f to (re)activate the screen
   8. Done! (till you flash the ATTINY again)
