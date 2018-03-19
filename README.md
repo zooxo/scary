@@ -5,18 +5,18 @@ Special thanks to the mohpc-forum (particular Pauli) for saving bytes an providi
   
 ## What is ScArY?
 ScArY is a scientific calculator based on an ATTINY85 microcontroller and a QYF-TM1638-board (8 digit LED display with 16 buttons controlled with 3 pins).
-[b]
+
 ScArY is capable of familiar functions of RPN calculators (ie stack operations) and many mathematical operations (ie trigonometic) as well as some special functions like gaussian distributions and gamma. In addition ScArY can save its state,  physical constants and sequences of keypresses permanently to the EEPROM.
-[/b]
+
 Due to the memory restrictions of the ATTINY85 (8 kilobytes) some compromises were made to offer so many functions. So the numbers are shown in SCI notation only (see below). Another compromise is the lack of checking for errors - usually the display is unreadable if an error occurs.
 
-## What's new in version2?
+## What's new in version 2?
 * ScArY saves its actual status (stack, brightness setting) permanantly to EEPROM. This is done when the screensaver is activated (keys f-f). Note the procedure to initialize these values after flashing the software (EEPROM was deleted).
 * It is possible to save up to 41 constants/numbers initialized with up to 3 characters to EEPROM. The saved constants can be browsed and reloaded very convenient. See the section of recommended physical constants.
 * Some kind of "Type Recorder" was realized. It is possible to save 4 slots with up to 51 keypresses to the EEPROM and recall them with user defined menu entries.
 
 ## On which hardware does ScArY run?
-Compile the attached file "scary_1_0-ino" with your arduino suite and upload the code to your ATTINY85 with some programmer hardware or an Arduino as ISP (like I did). Connect the ATTINY85 pins (5/6/7 resp. data/clock/strobe) with the corresponding pins on the QYF-TM1638-board, power them up (5V Vcc and GND) and you are running.
+Compile the attached file "scary_2_0-ino" with your arduino suite and upload the code to your ATTINY85 with some programmer hardware or an Arduino as ISP (like I did). Connect the ATTINY85 pins (5/6/7 resp. data/clock/strobe) with the corresponding pins on the QYF-TM1638-board, power them up (5V Vcc and GND) and you are running.
 
 ## Which Commands does ScArY support (COMMANDS and KEYS)?    
 ### Basic keys:
@@ -255,7 +255,7 @@ https://www.youtube.com/watch?v=q-9j547xWfg
     2.067834E-15, // 61 008 115 092 _Po Magnetic flux quantum
 
   IDENTIFIERS OF SEVEN SEGMENT DISPLAY (ie code to display digit 3 =  79 = 4f):
-  [code]
+  `
     DEC       0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
         HEX   0   1   2   3   4   5   6   7   8   9   a   b   c   d   e   f
                   _       _       _       _       _       _       _       _
@@ -282,4 +282,4 @@ https://www.youtube.com/watch?v=q-9j547xWfg
                   _       _       _       _       _       _       _       _
              |_  |_  |_| |_| |_  |_  |_| |_| |_  |_  |_| |_| |_  |_  |_| |_|
     112 70   |   |   |   |   | | | | | | | | |_  |_  |_  |_  |_| |_| |_| |_|
-[/code]
+`
