@@ -54,7 +54,10 @@ https://www.youtube.com/watch?v=q-9j547xWfg
 ## The Keyboard Layout
 ![keyboard](https://user-images.githubusercontent.com/16148023/36966764-be132be4-2055-11e8-9582-b050a5415ba3.png)
 
-
+     f[] [zZZ RESCUE]    7 [RCL]     8 [STO]         9 [/]
+      EE [MENU] (UP)     4 [CONST]   5 [SAVE]        6 [*]
+     CHS [ROT] (DOWN)    1 [PI]      2 [REC]         3 [-]
+       c [brightness]    0 [SWAP]    . [SHOW]    ENTER [+]
 
 
   Welcome to ScArY (Scientific Calculator with RPN on an ATTINY)
@@ -183,7 +186,8 @@ https://www.youtube.com/watch?v=q-9j547xWfg
   Browse stored numbers with LOAD (f-4) and load to X with ENTER. For browsing use
   UP and DOWN keys or enter a number (2 digits) directly.
 
-## PHYSICAL CONSTANTS, DECIMAL IDENTIFIER, NAME (source: WP34s manual):
+## PHYSICAL CONSTANTS, DECIMAL IDENTIFIER, NAME
+(source: WP34s manual):
 ```
 Constant         No  Td  Zd  Yd TZY Name
     ------------------------------------------------------------------------
@@ -251,7 +255,8 @@ Constant         No  Td  Zd  Yd TZY Name
     2.067834E-15, // 61 008 115 092 _Po Magnetic flux quantum
 ```
   
-## IDENTIFIERS OF SEVEN SEGMENT DISPLAY (ie code to display digit 3 =  79 = 4f):
+## IDENTIFIERS OF SEVEN SEGMENT DISPLAY
+(ie code to display digit 3 =  79 = 4f):
 ```
     DEC       0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
         HEX   0   1   2   3   4   5   6   7   8   9   a   b   c   d   e   f
