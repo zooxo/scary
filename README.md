@@ -129,7 +129,7 @@ https://www.youtube.com/watch?v=q-9j547xWfg
       "a b c d" user menu (plays recorded keypresses from slot "1 2 3 4")
 
 
-   USAGE OF EEPROM (512 bytes):
+## USAGE OF EEPROM (512 bytes):
       Brightness  EEADDRSTACK   EEADDRCONST       EEADDRREC
       |           | x y z t m | | C0 C1 ... C41 | | 4*REC(51) |
       0           1          20 21            307 308       511
@@ -137,9 +137,9 @@ https://www.youtube.com/watch?v=q-9j547xWfg
 
       Constant Ci (EESTEP = 7 bytes): char1, char2, char3, double number (4 bytes)
 
-  EXAMPLES FOR USER PROGRAM ("Type Recorder"):
+## EXAMPLES FOR USER PROGRAMS ("Type Recorder"):
 
-    Example to "program" the annuity factor to program slot 0 (user menu "a"):
+### Example to "program" the annuity factor to program slot 0 (user menu "a"):
       - 1 REC (save to slot 1 = a)
       - SWAP ENTER ENTER 1 + SWAP ROT SWAP PWR 1/x CHS 1 + ROT ROT ROT /
       - REC
@@ -153,7 +153,7 @@ https://www.youtube.com/watch?v=q-9j547xWfg
       An annual rent of $1 for 5 years is equal to a present value of $3.99 invested
       with an interest rate of 8% (and vic versa).
 
-    Example to "program" the conversion from rectangular to polar coordinates:
+### Example to "program" the conversion from rectangular to polar coordinates:
       - 2 REC (save to slot 2 = b)
       - ENTER ROT ROT SWAP ROT ENTER ROT SWAP
       - / ATAN ROT ROT * ROT ROT * + SQRT
@@ -164,7 +164,7 @@ https://www.youtube.com/watch?v=q-9j547xWfg
       - Results a lenght of SQRT(2) and with SWAP an angle of 45 degrees.
       - Calculation duration: 2.1 s
 
-    Example to "program" the conversion from polar to rectangular coordinates:
+### Example to "program" the conversion from polar to rectangular coordinates:
       - 3 REC (save to slot 3 = c)
       - ENTER ROT ROT SWAP ROT ENTER ROT SWAP ROT
       - COS * ROT SIN * ROT ROT ROT
@@ -176,20 +176,20 @@ https://www.youtube.com/watch?v=q-9j547xWfg
       - Calculation duration: 2 s
 
 
-  HOWTO WRITE PHYSICAL CONSTANTS TO EEPROM:
+## HOWTO WRITE PHYSICAL CONSTANTS TO EEPROM:
     1 Insert and store constant (f-8)
     2 Insert decimal values (Td, Zd, Yd) of characters (stack register TZY)
     3 Enter desired slot number (No) where to save the constant
     4 Enter SAVE (f-5)
 
-  HOW TO READ STORED CONSTANT:
+## HOW TO READ STORED CONSTANT:
   Browse stored numbers with LOAD (f-4) and load to X with ENTER. For browsing use
   UP and DOWN keys or enter a number (2 digits) directly.
 
 ## PHYSICAL CONSTANTS, DECIMAL IDENTIFIER, NAME
 (source: WP34s manual):
 ```
-Constant         No  Td  Zd  Yd TZY Name
+    Constant         No  Td  Zd  Yd TZY Name
     ------------------------------------------------------------------------
     365.2425,     // 00 000 000 119   A Gregorian year
     5.291772E-11, // 01 000 119 092  Ao Bohr radius
