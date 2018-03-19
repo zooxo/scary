@@ -257,15 +257,15 @@ https://www.youtube.com/watch?v=q-9j547xWfg
   IDENTIFIERS OF SEVEN SEGMENT DISPLAY (ie code to display digit 3 =  79 = 4f):
 
 
-´    DEC       0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15´
+"    DEC       0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
 
-´        HEX   0   1   2   3   4   5   6   7   8   9   a   b   c   d   e   f´
+"        HEX   0   1   2   3   4   5   6   7   8   9   a   b   c   d   e   f
 
-´                  _       _       _       _       _       _       _       _´
+"                  _       _       _       _       _       _       _       _
 
-´                       |   |           |   |           |   |           |   |´
+"                       |   |           |   |           |   |           |   |
 
-´    000 00                     |   |   |   |  _   _   _   _   _|  _|  _|  _|´
+"    000 00                     |   |   |   |  _   _   _   _   _|  _|  _|  _|
 
 ´                  _       _       _       _       _       _       _       _´
 
