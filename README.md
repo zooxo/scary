@@ -90,33 +90,6 @@ So the following procedure may help to bring ScArY in a defined state:
      sign  EE-sign  Indicator for recording
 ```
 
-## ENTERING NUMBERS:
-  1 Enter mantissa (with '.' if applicable)
-  2 If applicable: Enter EE to enter exponent (limited to 29)
-  3 If applicable: Toggle sign of exponent with EE
-  4 If applicable: Toggle sign of number with CHS
-
-
-  COMMANDS and KEYS:
-    Basic keys:
-      0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ., EE, CHS, ENTER, C/CE, f
-    f-keys:
-      +, -, *, / (basic operations)
-      RCL, STO, SHOW, SWAP, ROT, SQRT, PI
-      MENU (browse menu ... note user recorded menu "a b c d")
-      REC (records 4x51 keypresses to recall via user menu "a b c d")
-      CONST, SAVE (browse/load up to 41 user saved constants)
-      zZZ RESCUE (toggle screensaver and save state to EEPROM)
-      BRIGHTNESS (set brightness of display)
-    MENU-functions:
-      EXP, SQRT, POWER,1/X
-      LN, GAUSS (density and distribution),
-      GAMMA (Gamma/factorial), DEG/RAD (toggle)
-      SIN, COS, TAN, ASIN, ACOS, ATAN
-      SINH, COSH, TANH, ASINH, ACOSH, ATANH
-      "a b c d" user menu (plays recorded keypresses from slot "1 2 3 4")
-
-
 ## USAGE OF EEPROM (512 bytes):
       Brightness  EEADDRSTACK   EEADDRCONST       EEADDRREC
       |           | x y z t m | | C0 C1 ... C41 | | 4*REC(51) |
@@ -126,8 +99,7 @@ So the following procedure may help to bring ScArY in a defined state:
       Constant Ci (EESTEP = 7 bytes): char1, char2, char3, double number (4 bytes)
 
 ## EXAMPLES FOR USER PROGRAMS ("Type Recorder"):
-
-### Example to "program" the annuity factor to program slot 0 (user menu "a"):
+### Example to "program" the annuity factor to program slot 1 (user menu "a"):
       - 1 REC (save to slot 1 = a)
       - SWAP ENTER ENTER 1 + SWAP ROT SWAP PWR 1/x CHS 1 + ROT ROT ROT /
       - REC
