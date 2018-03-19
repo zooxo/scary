@@ -72,14 +72,14 @@ Version 2.0: https://youtu.be/O8WEHZN1RMk
 As ScArY saves the state (stack and brightness values) when pressing the f-key twice (screensaver) it also loads the state after switching on. But flashing the ATTINY may clear the EEPROM. So the loaded state when switching on the first time after flashing gets undefined values (... and maybe a dark or nonsense display).
 
 So the following procedure may help to bring ScArY in a defined state:
-  1 Press CLX (X=0) ... even if the display remains dark
-  2 Set brightness (f-CLX) ... at least a nonsense display should be readable
-  3 Press CLX (X=0) ... value of 0 should be readable
-  4 Press ENTER 3 times to clear the stack (X=Y=Z=T=0)
-  5 Press STO (f-1) to clear mem
-  6 Press f twice (f-f) to save the state to the EEPROM (activates screensaver too)
-  7 Press f to (re)activate the screen
-  8 Done! (till you flash the ATTINY again)
+  1. Press CLX (X=0) ... even if the display remains dark
+  2. Set brightness (f-CLX) ... at least a nonsense display should be readable
+  3. Press CLX (X=0) ... value of 0 should be readable
+  4. Press ENTER 3 times to clear the stack (X=Y=Z=T=0)
+  5. Press STO (f-1) to clear mem
+  6. Press f twice (f-f) to save the state to the EEPROM (activates screensaver too)
+  7. Press f to (re)activate the screen
+  8. Done! (till you flash the ATTINY again)
 
 ## 8-DIGITS SCIENTIFIC DISPLAY (SCI notation):
 ```
