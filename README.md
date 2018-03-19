@@ -52,7 +52,7 @@ https://www.youtube.com/watch?v=q-9j547xWfg
 ![circuit](https://user-images.githubusercontent.com/16148023/36966763-bdd99212-2055-11e8-9185-e1ec609a81a4.png)
 
 ## The Keyboard Layout
-![keyboard](https://user-images.githubusercontent.com/16148023/36966764-be132be4-2055-11e8-9582-b050a5415ba3.png)
+![keyboard2](https://user-images.githubusercontent.com/16148023/37587218-9ac6e782-2b56-11e8-8b4f-b3bd2d1db401.png)
 
      f[] [zZZ RESCUE]    7 [RCL]     8 [STO]         9 [/]
       EE [MENU] (UP)     4 [CONST]   5 [SAVE]        6 [*]
