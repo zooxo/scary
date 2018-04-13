@@ -28,6 +28,7 @@ In addition ScArY has some special features like saving its state, handling use
   sign  EE-sign  Indicator for recording
 ```
 ### KEYBOARD LAYOUT:
+![keyboard3](https://user-images.githubusercontent.com/16148023/38724995-62374fbc-3ef5-11e8-8817-7820591620a2.png)
 ```
   f[] [zZZ RESCUE]   7 [MENU]    8 [REC]        9 [/]
   EE [SUM] (UP)      4 [CONST]   5 [SAVE]       6 [*]
