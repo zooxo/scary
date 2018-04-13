@@ -136,12 +136,55 @@ ScArY is able to record 8 user defined sequences of keypresses (up to 52 each) a
 ```
 ### GAUSS:
 ```
-y                     ^                     |                   1 ------------------------                     |       +++++++ CDF (Cumulative Distribution Function)                     |   +                     | +                     (x)         .                     |+              CDF = integral(PDF) = 1/(1+exp(-0.07*x^3-1.6*x))                     +                      (-inf)                   **+**                **  +|   **                  +  |     *         PDF = 1/sqrt(2*PI)*exp(-x*x/2)             ** +    |      **      +*+*+*+        |         ***** PDF (Probability Density Function)      ---------------+------------------------> x
-      Example to calculate PDF and CDF at x=0:        1 0 GAUSS        2 PDF=0.3989=1/sqrt(2*PI)        3 SWAP        4 CDF=0.5
+                 y
+                 ^
+                 |
+               1 ------------------------
+                 |       +++++++ CDF (Cumulative Distribution Function)
+                 |   +
+                 | +                     (x)         .
+                 |+              CDF = integral(PDF) = 1/(1+exp(-0.07*x^3-1.6*x))
+                 +                      (-inf)
+               **+**
+            **  +|   **
+              +  |     *         PDF = 1/sqrt(2*PI)*exp(-x*x/2)
+         ** +    |      **
+  +*+*+*+        |         ***** PDF (Probability Density Function)
+  ---------------+------------------------> x
+  
+  Example to calculate PDF and CDF at x=0:
+    1 0 GAUSS
+    2 PDF=0.3989=1/sqrt(2*PI)
+    3 SWAP
+    4 CDF=0.5
 ```
 ### STATISTICS, LINEAR REGRESSION:
 ```
-y        ^                /        |  Ypredict(x=1.5)=4      4 - <----------- /        |             /        |            / ^        |           /  |        |          /      3 -        [*] P2=(1|3)        |        /        |       /      ^        |      /       |        |     /      2 -   [*] P1=(0.5|2)        |   /        |_ /           ^        | /|           |        |/ |           |      1 -  |           |       /|  |           |      / |  |           |     /  |  | Xpredict(y=1.5)=0.25        |  v           |    ----+----+----|----+----|-> x        0       | 1         2                |                Xmean=0.75             |  |           ->|--|<- Standard Deviation S=0.354
+     y
+     ^                /
+     |  Ypredict(x=1.5)=4
+   4 - <----------- /
+     |             /|
+     |            / ^
+     |           /  |
+     |          /   |
+   3 -        [*] P2=(1|3)
+     |        /     |
+     |       /      ^
+     |      /       |
+     |     /
+   2 -   [*] P1=(0.5|2)
+     |   /          |
+     |_ /           ^
+     | /|           |
+     |/ |           |
+   1 -  |           |
+    /|  |           |
+   / |  |           |
+  /  |  | Xpredict(y=1.5)=0.25
+     |  v           |
+  ----+----+----|----+----|-> x
+      0       | 1         2                |                Xmean=0.75             |  |           ->|--|<- Standard Deviation S=0.354
       Example to calculate mean value and standard deviation:        1 0.5 SUM 1 SUM ... enter X-data        2 STAT        3 Xmean=0.75 (mean value)        4 SWAP        5 S=0.354 (standard deviation)
       Example to calculate a linear regression:        1 2 ENTER 0.5 SUM ... enter YX-data of first node        2 3 ENTER 1 SUM   ... enter YX-data of second node        3 1.5 LR          ... enter desired x/y-value        4 X=0.25          ... predicted x-value for y=1.5        5 SWAP        6 Y=4             ... predicted y-value for x=1.5
       Example to calculate the line of best fit:        1 2 ENTER 0.5 SUM ... enter YX-data of first node        2 3 ENTER 1 SUM   ... enter YX-data of second node        3 1 LR SWAP       ... enter x-value of 1        4 Y=3             ... predicted y-value for x=1        5 0 LR ROT        ... enter x-value of 0        6 Y=1             ... predicted y-value for x=0 (y-axis-intercept)        7 -               ... substract y(1) and y(0) (=slope)        8 X=2             ... slope of best-fit-line        9 y = 2 * x + 1   ... formula of best-fit-line
