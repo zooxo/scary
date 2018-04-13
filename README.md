@@ -1,6 +1,10 @@
 # ScArY - Scientific RPN calculator based on an ATTINY85
 Version 3.0 ... (c) 2018 by deetee/zooxo
 
+See short videos of older versions:
+Version 1.0: https://youtu.be/q-9j547xWfg
+Version 2.0: https://youtu.be/O8WEHZN1RMk
+
 ScArY is free software. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation.
 ## PREAMBLE
 It is amazing how much calculator power a simple microcontroller like the ATTINY85 is able to perform. This 8 pin 8-bit core microcontroller provides only 8 kilobytes of flash memory to store program code, 512 bytes of RAM to handle variables and 512 bytes of EEPROM to save settings and user data permanently. So every byte is valuable and it took me many hours to optimize the code and to decide which function or feature to choose.
