@@ -416,27 +416,6 @@
       2.067834E-15  _Po Magnetic flux quantum
 
   ____________________
-
-
-
-********************************************************************************************
-
-
-   TODO:
-   - Doku
-   - solver INT, fkt(1)
-   - Menu ins EEPROM, user defineable (auch für EXP, SQRT, ...), 4 chars only!
-   - Matrix 3x3 Gleichungssystem (zB Menu: 1 2 3 M) zeilenweiser input ähnlich usermenu chars
-   - CONST 4 = RAD (PI/180)
-
-  TODOs (if more memory could be allocated):
-    - Clock, stopwatch
-    - sleep mode
-    - Statistics/L.R.,
-    - SQR,LOG, 10x, Py,x, Cy,x,
-    - ->P (convert to polar and ...), ->R (... rectangular coordinates)
-    - ->H.MS (convert hours to hours, minutes, seconds ...), ->H (... and back)
-    - ->RAD (convert degrees to radians), ->DEG (and back)
 */
 
 
