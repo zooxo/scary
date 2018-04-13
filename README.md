@@ -17,48 +17,122 @@ In addition ScArY has some special features like saving its state, handling use
 ## THE CALCULATOR
 ### 8-DIGITS SCIENTIFIC DISPLAY (permanent SCI notation):
 ```
-mantissa  exponent        |         |      - m.m m m - e e.      |         |    |      sign  EE-sign  Indicator for recording
+    mantissa  exponent
+    |         |
+  - m.m m m - e e.
+  |         |    |
+  sign  EE-sign  Indicator for recording
 ```
 ### KEYBOARD LAYOUT:
 ```
-f[] [zZZ RESCUE]   7 [MENU]    8 [REC]        9 [/]       EE [SUM] (UP)     4 [CONST]   5 [SAVE]       6 [*]      CHS [ROT] (DOWN)   1 [RCL]     2 [STO]        3 [-]      CLX [brightness]   0 [SHOW]    . [SWAP]   ENTER [+]
+  f[] [zZZ RESCUE]   7 [MENU]    8 [REC]        9 [/]
+  EE [SUM] (UP)      4 [CONST]   5 [SAVE]       6 [*]
+  CHS [ROT] (DOWN)   1 [RCL]     2 [STO]        3 [-]
+  CLX [brightness]   0 [SHOW]    . [SWAP]   ENTER [+]
 ```
 ### MENU:
-```       E      F      G      H       ... User Menus ("Type Recorder")       a      b      c      d       EXP    SQRT   POW    INV     ... Basic Functions       LN     ANNU   ->P    ->R     ... Logarithm, Annuity, Polar/Rectangular       GAMMA  GAUSS  STAT   LR      ... Probability, Statistics, Linear Regression       (t)    SIN    COS    TAN     ... Trigonometric Functions       (t.)   ASIN   ACOS   ATAN       (h)    SINH   COSH   TANH    ... Hyperbolic Functions       (h.)   ASINH  ACOSH  ATANH
+```
+  E      F      G      H       ... User Menus ("Type Recorder")
+  a      b      c      d
+  EXP    SQRT   POW    INV     ... Basic Functions
+  LN     ANNU   ->P    ->R     ... Logarithm, Annuity, Polar/Rectangular
+  GAMMA  GAUSS  STAT   LR      ... Probability, Statistics, Linear Regression
+  (t)    SIN    COS    TAN     ... Trigonometric Functions
+  (t.)   ASIN   ACOS   ATAN
+  (h)    SINH   COSH   TANH    ... Hyperbolic Functions
+  (h.)   ASINH  ACOSH  ATANH
 ```
 ### ENTERING NUMBERS:
-    1 Enter mantissa (with '.' if applicable)      Press ENTER to push mantissa to stack    2 To enter power of ten:      Enter exponent and (if applicable) change sign of exponent with CHS    3 Press EE to link the mantissa with the exponent    4 If applicable: Toggle sign of number with CHS
-##  OPERATIONS and KEYS
+```
+  1 Enter mantissa (with '.' if applicable)
+    Press ENTER to push mantissa to stack
+  2 To enter power of ten:
+    Enter exponent and (if applicable) change sign of exponent with CHS
+  3 Press EE to link the mantissa with the exponent
+  4 If applicable: Toggle sign of number with CHS
+```
+## OPERATIONS and KEYS
 ### BASIC KEYS:
 ```
-0 1 2 3 4 5 6 7 8 9 . ... Digits and decimal point      CHS EE                ... Change sign and enter exponent (actually Y*10^X)      ENTER                 ... Enter number (push stack)      C                     ... Clear X, clear entry or escape/stop      f                     ... Function or shift to choose shifted keys
+  0 1 2 3 4 5 6 7 8 9 . ... Digits and decimal point
+  CHS EE                ... Change sign and enter exponent (actually Y*10^X)
+  ENTER                 ... Enter number (push stack)
+  C                     ... Clear X, clear entry or escape/stop
+  f                     ... Function or shift to choose shifted keys
 ```
 ### F-KEYS:
-```+ -
-* /    ... Basic operations      STO RCL    ... Store number to respectively recall number from memory      SHOW       ... Show full mantissa of number (7 digits without decimal point)      SWAP       ... Swap X and Y register of stack (X<->Y)      ROT        ... Rotate stack (X=Y Y=Z Z=T T=X)      SUM        ... Enter X-data for statistics or X,Y-data for linear regression      MENU       ... Browse menu      REC        ... Records 8x52 keypresses (to recall via user menu "abcdEFGH")      CONST      ... Browse up to 10 user saved constants      SAVE       ... Save up to 10 user saved constants      zZZ RESCUE ... Toggle screensaver and save calculator state to EEPROM      BRIGHTNESS ... Set brightness of display (0...7)
+```
+  + - * /    ... Basic operations
+  STO RCL    ... Store number to respectively recall number from memory
+  SHOW       ... Show full mantissa of number (7 digits without decimal point)
+  SWAP       ... Swap X and Y register of stack (X<->Y)
+  ROT        ... Rotate stack (X=Y Y=Z Z=T T=X)
+  SUM        ... Enter X-data for statistics or X,Y-data for linear regression
+  MENU       ... Browse menu
+  REC        ... Records 8x52 keypresses (to recall via user menu "abcdEFGH")
+  CONST      ... Browse up to 10 user saved constants
+  SAVE       ... Save up to 10 user saved constants
+  zZZ RESCUE ... Toggle screensaver and save calculator state to EEPROM
+  BRIGHTNESS ... Set brightness of display (0...7)
 ```
 ### MENU-FUNCTIONS:
-```EXP LN SQRT POWER INV            ... Basic scientific operations      ANNU ->P ->R                     ... Annuity, polar/rectangular ... x)      GAMMA GAUSS                      ... Gamma/!, Probability(PDF/CDF)  ... x)      STAT LR                          ... Statistics, linear regression      SIN  COS  TAN  ASIN  ACOS  ATAN  ... Trigonometric      SINH COSH TANH ASINH ACOSH ATANH ... Hyperbolic ... x)      a b c d E F G H                  ... user menu (play recorded keypresses)
-      x) ... Some functions (ANNU, ->P, ->R, GAMMA, GAUSS, HYP) may affect the             whole stack as they are calculated with basic operations.
+```
+  EXP LN SQRT POWER INV            ... Basic scientific operations
+  ANNU ->P ->R                     ... Annuity, polar/rectangular ... x)
+  GAMMA GAUSS                      ... Gamma/!, Probability(PDF/CDF)  ... x)
+  STAT LR                          ... Statistics, linear regression
+  SIN  COS  TAN  ASIN  ACOS  ATAN  ... Trigonometric
+  SINH COSH TANH ASINH ACOSH ATANH ... Hyperbolic ... x)
+  a b c d E F G H                  ... user menu (play recorded keypresses)
+  
+  x) ... Some functions (ANNU, ->P, ->R, GAMMA, GAUSS, HYP) may affect the
+         whole stack as they are calculated with basic operations.
 ```
 ## SPECIALITIES
 ### PREPARING ScArY AFTER FLASHING:
-      As ScArY saves the state (stack and brightness values) when pressing the      f-key twice (screensaver) it also loads the state after switching on.      But flashing the ATTINY may clear the EEPROM. So the loaded state when      switching on the first time after flashing gets undefined values      (... and maybe a dark or "non interpretable" display).
-      So the following procedure may help to bring ScArY in a defined state:        1 Press CLX (X=0)        ... even if the display remains dark        2 Set brightness (f-CLX) ... a "non interpretable" display is readable        3 Press CLX (X=0)        ... value of 0 should be readable        4 Press ENTER 3 times    ... clears the stack (X=Y=Z=T=0)        5 Press STO (f-2)        ... clears mem        6 Press f twice (f-f)    ... saves state to EEPROM (activates screensaver)        7 Press f                ... (re)activates the screen
+As ScArY saves the state (stack and brightness values) when pressing the f-key twice (screensaver) it also loads the state after switching on. But flashing the ATTINY may clear the EEPROM. So the loaded state when switching on the first time after flashing gets undefined values (... and maybe a dark or "non interpretable" display).
+
+So the following procedure may help to bring ScArY in a defined state:
+```
+  1 Press CLX (X=0)        ... even if the display remains dark
+  2 Set brightness (f-CLX) ... a "non interpretable" display is readable
+  3 Press CLX (X=0)        ... value of 0 should be readable
+  4 Press ENTER 3 times    ... clears the stack (X=Y=Z=T=0)
+  5 Press STO (f-2)        ... clears mem
+  6 Press f twice (f-f)    ... saves state to EEPROM (activates screensaver)
+  7 Press f                ... (re)activates the screen
+```
 ### WORKING WITH CONSTANTS:
-      ScArY is capable to save up to 10 constants to permanently to the      EEPROM memory. Additional to each constant up to three characters can be      saved to recall and browse the constants very comfortable.      See "Appendix - Physical Constants" for some physical constants.
-```   
-Example to write PI to slot O:        1 3.141593 STO        ... store PI        2 0 ENTER 115 ENTER 6 ... enter 3 characters (" PI"), see "Appendix -                                  Identifiers of 7-Segment Displays"        3 ENTER 0             ... enter slot 0        4 SAVE                ... save constant to EEPROM
-      Example to load stored constant:        1 CONST         ... enter the catalogue of constants          Use UP/DOWN-keys for browsing or enter a number directly (0...9)        2 ENTER         ... load constant to stack
+ScArY is capable to save up to 10 constants to permanently to the EEPROM memory. Additional to each constant up to three characters can be saved to recall and browse the constants very comfortable. See "Appendix - Physical Constants" for some physical constants.
+```
+  Example to write PI to slot O:
+    1 3.141593 STO        ... store PI
+    2 0 ENTER 115 ENTER 6 ... enter 3 characters (" PI"), see "Appendix - Identifiers of 7-Segment Displays"        
+    3 ENTER 0             ... enter slot 0
+    4 SAVE                ... save constant to EEPROM
+
+  Example to load stored constant:
+    1 CONST         ... enter the catalogue of constants
+                        Use UP/DOWN-keys for browsing or enter a number directly (0...9)
+    2 ENTER         ... load constant to stack
 ```
 ### TYPE RECORDER:
-      ScArY is able to record 8 user defined sequences of keypresses      (up to 52 each) and "replay" them by selecting the appropriate      user menu entry. These user defined key sequences or formulas are stored      to the EEPROM memory permanently.
+ScArY is able to record 8 user defined sequences of keypresses (up to 52 each) and "replay" them by selecting the appropriate user menu entry. These user defined key sequences or formulas are stored to the EEPROM memory permanently.
 ```
-Example to record temperature conversion (Fahrenheit -> Celsius):        1 3 REC      ... record to slot 3 (user menu c)        2 32 - 1.8 / ... convert to celsius        3 REC        ... stop recording
-      Convert Fahrenheit to Celsius:        1 50 MENU->c ... play recorded user formula in slot c (=3)        2 X=10       ... 50 Fahrenheit are 10 Celsius
+  Example to record temperature conversion (Fahrenheit -> Celsius):
+    1 3 REC      ... record to slot 3 (user menu c)
+    2 32 - 1.8 / ... convert to celsius
+    3 REC        ... stop recording
+
+  Convert Fahrenheit to Celsius:
+    1 50 MENU->c ... play recorded user formula in slot c (=3)
+    2 X=10       ... 50 Fahrenheit are 10 Celsius
 ```
 ### ANNUITY (PRESENT VALUE):
-```      Example to calculate the present value of a $1 5 year return with an      interest rate of 8%:        1 .08 ENTER 5 ANNU ... annuity factor for 5 years and 8%        2 X=3.99 ... 5 years $1 each are equal to ~$4 invested with 8%
+```
+  Example to calculate the present value of a $1 5 year return with an interest rate of 8%:
+    1 .08 ENTER 5 ANNU ... annuity factor for 5 years and 8%
+    2 X=3.99           ... 5 years $1 each are equal to ~$4 invested with 8%
 ```
 ### GAUSS:
 ```
