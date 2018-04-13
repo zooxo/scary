@@ -2,7 +2,9 @@
 Version 3.0 ... (c) 2018 by deetee/zooxo
 
 See short videos of older versions:
+
 Version 1.0: https://youtu.be/q-9j547xWfg
+
 Version 2.0: https://youtu.be/O8WEHZN1RMk
 
 ScArY is free software. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation.
