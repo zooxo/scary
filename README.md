@@ -6,6 +6,7 @@ ScArY is free software. You can redistribute it and/or modify it under the terms
 It is amazing how much calculator power a simple microcontroller like the ATTINY85 is able to perform. This 8 pin 8-bit core microcontroller provides only 8 kilobytes of flash memory to store program code, 512 bytes of RAM to handle variables and 512 bytes of EEPROM to save settings and user data permanently. So every byte is valuable and it took me many hours to optimize the code and to decide which function or feature to choose.
 
 In general, functionality and functions outweighted comfort and error handling which can be seen, for instance, looking at the permanent scientific display format or a "non interpretable" display after dividing by zero. Thus the user has to follow the calculation process more strictly than on conventional RPN calculators.
+
 Enjoy!    deetee
 ## INTRODUCTION
 ScArY is a scientific calculator based on an ATTINY85 microcontroller and a QYF-TM1638-board (8 digit LED display with 16 buttons controlled with 3 pins).
