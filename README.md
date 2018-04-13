@@ -160,51 +160,123 @@ ScArY is able to record 8 user defined sequences of keypresses (up to 52 each) a
 ```
 ### STATISTICS, LINEAR REGRESSION:
 ```
-     y
-     ^                /
-     |  Ypredict(x=1.5)=4
-   4 - <----------- /
-     |             /|
-     |            / ^
-     |           /  |
-     |          /   |
-   3 -        [*] P2=(1|3)
-     |        /     |
-     |       /      ^
-     |      /       |
-     |     /
-   2 -   [*] P1=(0.5|2)
-     |   /          |
-     |_ /           ^
-     | /|           |
-     |/ |           |
-   1 -  |           |
-    /|  |           |
-   / |  |           |
-  /  |  | Xpredict(y=1.5)=0.25
-     |  v           |
+      y
+      ^                /
+      |  Ypredict(x=1.5)=4
+    4 - <----------- /
+      |             /|
+      |            / ^
+      |           /  |
+      |          /   |
+    3 -        [*] P2=(1|3)
+      |        /     |
+      |       /      ^
+      |      /       |
+      |     /
+    2 -   [*] P1=(0.5|2)
+      |   /          |
+      |_ /           ^
+      | /|           |
+      |/ |           |
+    1 -  |           |
+     /|  |           |
+    / |  |           |
+   /  |  | Xpredict(y=1.5)=0.25
+      |  v           |
   ----+----+----|----+----|-> x
-      0       | 1         2                |                Xmean=0.75             |  |           ->|--|<- Standard Deviation S=0.354
-      Example to calculate mean value and standard deviation:        1 0.5 SUM 1 SUM ... enter X-data        2 STAT        3 Xmean=0.75 (mean value)        4 SWAP        5 S=0.354 (standard deviation)
-      Example to calculate a linear regression:        1 2 ENTER 0.5 SUM ... enter YX-data of first node        2 3 ENTER 1 SUM   ... enter YX-data of second node        3 1.5 LR          ... enter desired x/y-value        4 X=0.25          ... predicted x-value for y=1.5        5 SWAP        6 Y=4             ... predicted y-value for x=1.5
-      Example to calculate the line of best fit:        1 2 ENTER 0.5 SUM ... enter YX-data of first node        2 3 ENTER 1 SUM   ... enter YX-data of second node        3 1 LR SWAP       ... enter x-value of 1        4 Y=3             ... predicted y-value for x=1        5 0 LR ROT        ... enter x-value of 0        6 Y=1             ... predicted y-value for x=0 (y-axis-intercept)        7 -               ... substract y(1) and y(0) (=slope)        8 X=2             ... slope of best-fit-line        9 y = 2 * x + 1   ... formula of best-fit-line
+      0       | 1         2
+              |
+              Xmean=0.75
+           |  |
+         ->|--|<- Standard Deviation S=0.354
+
+  Example to calculate mean value and standard deviation:
+    1 0.5 SUM 1 SUM ... enter X-data
+    2 STAT
+    3 Xmean=0.75 (mean value)
+    4 SWAP
+    5 S=0.354 (standard deviation)
+
+  Example to calculate a linear regression:
+    1 2 ENTER 0.5 SUM ... enter YX-data of first node
+    2 3 ENTER 1 SUM   ... enter YX-data of second node
+    3 1.5 LR          ... enter desired x/y-value
+    4 X=0.25          ... predicted x-value for y=1.5
+    5 SWAP
+    6 Y=4             ... predicted y-value for x=1.5
+
+  Example to calculate the line of best fit:
+    1 2 ENTER 0.5 SUM ... enter YX-data of first node
+    2 3 ENTER 1 SUM   ... enter YX-data of second node
+    3 1 LR SWAP       ... enter x-value of 1
+    4 Y=3             ... predicted y-value for x=1
+    5 0 LR ROT        ... enter x-value of 0
+    6 Y=1             ... predicted y-value for x=0 (y-axis-intercept)
+    7 -               ... substract y(1) and y(0) (=slope)
+    8 X=2             ... slope of best-fit-line
+    9 y = 2 * x + 1   ... formula of best-fit-line
 ```
 ## APPENDIX
 ### HARDWARE:
-```__________________            -.---------           | 8.8.8.8.8.8.8.8. |           | 1()   ()8 |-VCC  GND-|GND               |           | 2(3) (2)7 |----------|DIO   *   *   *   |           | 3(4) (1)6 |----------|CLK   *   *   *   |       GND-| 4()  (0)5 |----------|STB   *   *   *   |            -----------       VCC-|VCC   *   *   *   |              ATTINY85             ------------------       VCC=5V                          QYF-TM1638
+```
+                              __________________
+       -.---------           | 8.8.8.8.8.8.8.8. |
+      | 1()   ()8 |-VCC  GND-|GND               |
+      | 2(3) (2)7 |----------|DIO   *   *   *   |
+      | 3(4) (1)6 |----------|CLK   *   *   *   |
+  GND-| 4()  (0)5 |----------|STB   *   *   *   |
+       -----------       VCC-|VCC   *   *   *   |
+         ATTINY85             ------------------
+  VCC=5V                          QYF-TM1638
 ```
 ### USAGE OF EEPROM (512 bytes):
 ```
-| Brightness|   Stack   | |   CONSTANTS  | |  RECORDER |      |           | X Y Z T M | | C0 C1 ... C9 | | 8*REC(52) |      0           1          20 21            90 91        507      |     1     |     20    | |      70      | |    416    |
+  | Brightness|   Stack   | |   CONSTANTS  | |  RECORDER |
+  |           | X Y Z T M | | C0 C1 ... C9 | | 8*REC(52) |
+  0           1          20 21            90 91        507
+  |     1     |     20    | |      70      | |    416    |
 ```
 ### ASCII TABLE:
 ```
-DEC     |  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5          HEX |  0 1 2 3 4 5 6 7 8 9 a b c d e f      ------------------------------------------      032 20  |    ! " # $ % & ' ( ) * + , - . /      048 30  |  0 1 2 3 4 5 6 7 8 9 : ; < = > ?      064 40  |  @ A B C D E F G H I J K L M N O      080 50  |  P Q R S T U V W X Y Z [ \ ] ^ _      096 60  |  ` a b c d e f g h i j k l m n o      112 70  |  p q r s t u v w x y z { | } ~
+  DEC     |  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5
+      HEX |  0 1 2 3 4 5 6 7 8 9 a b c d e f
+  ------------------------------------------
+  032 20  |    ! " # $ % & ' ( ) * + , - . /
+  048 30  |  0 1 2 3 4 5 6 7 8 9 : ; < = > ?
+  064 40  |  @ A B C D E F G H I J K L M N O
+  080 50  |  P Q R S T U V W X Y Z [ \ ] ^ _
+  096 60  |  ` a b c d e f g h i j k l m n o
+  112 70  |  p q r s t u v w x y z { | } ~
 ```
 ### IDENTIFIERS OF 7-SEGMENT DISPLAY:
 ```
-(i.e. code to display digit 3 =  79 = 4f)
-      DEC       0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15          HEX   0   1   2   3   4   5   6   7   8   9   a   b   c   d   e   f                    _       _       _       _       _       _       _       _                         |   |           |   |           |   |           |   |      000 00                     |   |   |   |  _   _   _   _   _|  _|  _|  _|                    _       _       _       _       _       _       _       _                         |   |           |   |           |   |           |   |      016 10   |   |   |   |   | | | | | | | | |_  |_  |_  |_  |_| |_| |_| |_|                    _       _       _       _       _       _       _       _               |   |   | | | | |   |   | | | | |   |   | | | | |   |   | | | |      032 20                     |   |   |   |  _   _   _   _   _|  _|  _|  _|                    _       _       _       _       _       _       _       _               |   |   | | | | |   |   | | | | |   |   | | | | |   |   | | | |      048 30   |   |   |   |   | | | | | | | | |_  |_  |_  |_  |_| |_| |_| |_|                    _       _       _       _       _       _       _       _                _   _   _|  _|  _   _   _|  _|  _   _   _|  _|  _   _   _|  _|      064 40                     |   |   |   |  _   _   _   _   _|  _|  _|  _|                    _       _       _       _       _       _       _       _                _   _   _|  _|  _   _   _|  _|  _   _   _|  _|  _   _   _|  _|      080 50   |   |   |   |   | | | | | | | | |_  |_  |_  |_  |_| |_| |_| |_|                    _       _       _       _       _       _               _               |_  |_  |_| |_| |_  |_  |_| |_| |_  |_  |_| |_| |_  |_  |_| |_|      096 60                     |   |   |   |  _   _   _   _   _|  _|  _|  _|                    _       _       _       _       _       _       _       _               |_  |_  |_| |_| |_  |_  |_| |_| |_  |_  |_| |_| |_  |_  |_| |_|      112 70   |   |   |   |   | | | | | | | | |_  |_  |_  |_  |_| |_| |_| |_|
+  (i.e. code to display digit 3 =  79 = 4f)
+  DEC       0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
+      HEX   0   1   2   3   4   5   6   7   8   9   a   b   c   d   e   f
+                _       _       _       _       _       _       _       _
+                     |   |           |   |           |   |           |   |
+  000 00                     |   |   |   |  _   _   _   _   _|  _|  _|  _|
+                _       _       _       _       _       _       _       _
+                     |   |           |   |           |   |           |   |
+  016 10   |   |   |   |   | | | | | | | | |_  |_  |_  |_  |_| |_| |_| |_|
+                _       _       _       _       _       _       _       _
+           |   |   | | | | |   |   | | | | |   |   | | | | |   |   | | | |
+  032 20                     |   |   |   |  _   _   _   _   _|  _|  _|  _|
+                _       _       _       _       _       _       _       _
+           |   |   | | | | |   |   | | | | |   |   | | | | |   |   | | | |
+  048 30   |   |   |   |   | | | | | | | | |_  |_  |_  |_  |_| |_| |_| |_|
+                _       _       _       _       _       _       _       _
+            _   _   _|  _|  _   _   _|  _|  _   _   _|  _|  _   _   _|  _|      
+  064 40                     |   |   |   |  _   _   _   _   _|  _|  _|  _|
+                _       _       _       _       _       _       _       _
+            _   _   _|  _|  _   _   _|  _|  _   _   _|  _|  _   _   _|  _|      
+  080 50   |   |   |   |   | | | | | | | | |_  |_  |_  |_  |_| |_| |_| |_|
+                _       _       _       _       _       _               _
+           |_  |_  |_| |_| |_  |_  |_| |_| |_  |_  |_| |_| |_  |_  |_| |_|      
+  096 60                     |   |   |   |  _   _   _   _   _|  _|  _|  _|
+                _       _       _       _       _       _       _       _
+           |_  |_  |_| |_| |_  |_  |_| |_| |_  |_  |_| |_| |_  |_  |_| |_|
+  112 70   |   |   |   |   | | | | | | | | |_  |_  |_  |_  |_| |_| |_| |_|
 ```
 ### PHYSICAL CONSTANTS:
 ```
