@@ -280,5 +280,71 @@ ScArY is able to record 8 user defined sequences of keypresses (up to 52 each) a
 ```
 ### PHYSICAL CONSTANTS:
 ```
-Constant      ID  Name      ---recommended:-------------------------------------------      3.141593      PI  Number PI      0.01745329    RpD Radians per Degrees      ---from WP34S-Manual:-------------------------------------      365.2425      A   Gregorian year      5.291772E-11  Ao  Bohr radius      384.4E6       Am  Semi-major axis of the Moon's orbit      1.495979E11   Ae  Semi-major axis of the Earth's orbit      2.997942E8    c   Speed of light      3.741772E-16  C1  First radiation constant      0.01438777    C2  Second radiation constant      1.602177E-19  e   Electron charge      96485.34      F   Faraday constant      2.502908      Fa  Feigenbaum's alpha      4.669202      Fd  Feigenbaum's delta      9.80665       g   Standard earth accelleration      6.674083E-11  G   Newtonian constant of gravitation      7.748092E-5   Go  Conductance quantum      0.9159656     Gc  Catalan's constant      -2.002232     Ge  Lande's electron g-factor      6.626069E-34  h   Planck constant      1.38065E-23   k   Boltzmann constant      4.835979E14   Kj  Josephson constant      1.616199      lP  Planck length      9.109383E-31  me  Electron mass      7.349E22      mM  Mass of the Moon      1.674927E-27  mn  Neutron mass      1.672622E-27  mp  Proton mass      2.17651E-8    mP  Planck mass      1.660539E-27  mu  Atomic mass unit      1.492417E-10  Muc Energy equivalent of atomic mass unit      1.883541E-28  mm  Muon mass      1.9891E30     mS  Mass of the Sun      5.9736E24     mE  Mass of the Earth      6.022141E23   NA  Avogadro's number      101325        po  Standard atmospheric pressure      1.875546E-18  qP  Planck charge      8.314472      R   Molar gas constant      2.81794E-15   re  Electron radius      25812.81      RK  Von Klitzing constant      1.73753E6     RM  Mean radius of the Moon      1.097373E7    Ryd Rydberg constant      6.96E8        rS  Mean radius of the Sun      6.37101E6     rE  Mean radius of the Earth      273.15        To  Standard temperature      5.39106E-44   tP  Planck time      1.416833E-32  TP- Planck temperature      0.02241397    Vm  Molar volume of an ideal gas      376.7303      Zo  Impedance of vacuum      7.297353E-3   _A  Fine structure constant      0.5772157     _GE Euler-Mascheroni constant      2.675222E8    _GP Proton gyromagnetic ratio      8.854188E-12  _Eo Electric constant or vacuum permitivity      2.42631E-12   _Le Compton wavelength of the electron      1.319591E-15  _Ln Compton wavelength of the neutorn      1.32141E-15   _Lp Compton wavelength of the proton      1.256673E-6   _mo Magnetic constant or vacuum permeability      9.274009E-24  _mB Bohr's magneton      -9.284764E-24 _me Electron magnetic moment      -9.662364E-27 _mn Neutron magnetic moment      1.410607E-26  _mp Proton magnetic moment      5.050783E-27  _mu Nuclear magneton      -4.490448E-26 _mm Muon magnetic moment      5.670373E-8   _SB Stefan-Boltzmann constant      1.618034      _P  Golden ratio      2.067834E-15  _Po Magnetic flux quantum
+  Constant      ID  Name
+  ---recommended:-------------------------------------------
+  3.141593      PI  Number PI
+  0.01745329    RpD Radians per Degrees
+  ---from WP34S-Manual:-------------------------------------
+  365.2425      A   Gregorian year
+  5.291772E-11  Ao  Bohr radius
+  384.4E6       Am  Semi-major axis of the Moon's orbit
+  1.495979E11   Ae  Semi-major axis of the Earth's orbit
+  2.997942E8    c   Speed of light
+  3.741772E-16  C1  First radiation constant
+  0.01438777    C2  Second radiation constant
+  1.602177E-19  e   Electron charge
+  96485.34      F   Faraday constant
+  2.502908      Fa  Feigenbaum's alpha
+  4.669202      Fd  Feigenbaum's delta
+  9.80665       g   Standard earth accelleration
+  6.674083E-11  G   Newtonian constant of gravitation
+  7.748092E-5   Go  Conductance quantum
+  0.9159656     Gc  Catalan's constant
+  -2.002232     Ge  Lande's electron g-factor
+  6.626069E-34  h   Planck constant
+  1.38065E-23   k   Boltzmann constant
+  4.835979E14   Kj  Josephson constant
+  1.616199      lP  Planck length
+  9.109383E-31  me  Electron mass
+  7.349E22      mM  Mass of the Moon
+  1.674927E-27  mn  Neutron mass
+  1.672622E-27  mp  Proton mass
+  2.17651E-8    mP  Planck mass
+  1.660539E-27  mu  Atomic mass unit
+  1.492417E-10  Muc Energy equivalent of atomic mass unit
+  1.883541E-28  mm  Muon mass
+  1.9891E30     mS  Mass of the Sun
+  5.9736E24     mE  Mass of the Earth
+  6.022141E23   NA  Avogadro's number
+  101325        po  Standard atmospheric pressure
+  1.875546E-18  qP  Planck charge
+  8.314472      R   Molar gas constant
+  2.81794E-15   re  Electron radius
+  25812.81      RK  Von Klitzing constant
+  1.73753E6     RM  Mean radius of the Moon
+  1.097373E7    Ryd Rydberg constant
+  6.96E8        rS  Mean radius of the Sun
+  6.37101E6     rE  Mean radius of the Earth
+  273.15        To  Standard temperature
+  5.39106E-44   tP  Planck time
+  1.416833E-32  TP- Planck temperature
+  0.02241397    Vm  Molar volume of an ideal gas
+  376.7303      Zo  Impedance of vacuum
+  7.297353E-3   _A  Fine structure constant
+  0.5772157     _GE Euler-Mascheroni constant
+  2.675222E8    _GP Proton gyromagnetic ratio
+  8.854188E-12  _Eo Electric constant or vacuum permitivity
+  2.42631E-12   _Le Compton wavelength of the electron
+  1.319591E-15  _Ln Compton wavelength of the neutron
+  1.32141E-15   _Lp Compton wavelength of the proton
+  1.256673E-6   _mo Magnetic constant or vacuum permeability
+  9.274009E-24  _mB Bohr's magneton
+  -9.284764E-24 _me Electron magnetic moment
+  -9.662364E-27 _mn Neutron magnetic moment
+  1.410607E-26  _mp Proton magnetic moment
+  5.050783E-27  _mu Nuclear magneton
+  -4.490448E-26 _mm Muon magnetic moment
+  5.670373E-8   _SB Stefan-Boltzmann constant
+  1.618034      _P  Golden ratio
+  2.067834E-15  _Po Magnetic flux quantum
 ```
