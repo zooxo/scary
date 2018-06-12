@@ -1,6 +1,8 @@
 # ScArY - Scientific RPN calculator based on an ATTINY85
 Version 3.0 ... (c) 2018 by deetee/zooxo
+
 ![all](https://user-images.githubusercontent.com/16148023/41286957-bc357e2a-6e30-11e8-8a07-d2c5c27c294c.jpg)
+
 See short videos of older versions:
 * Version 1.0: https://youtu.be/q-9j547xWfg
 * Version 2.0: https://youtu.be/O8WEHZN1RMk
